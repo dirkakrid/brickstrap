@@ -89,6 +89,10 @@ function brickstrap_create_tar()
             --one-file-system \
             --preserve-permissions \
             --exclude "./brickstrap" \
+            --exclude "./dev/*" \
+            --exclude "./sys/*" \
+            --exclude "./proc/*" \
+            --exclude "./tmp/*" \
             --exclude ".dockerenv" \
             $BRICKSTRAP_TAR_EXCLUDE_OPTION \
             --file "/brickstrap/_tar-out/$brickstrap_tar_base" \
