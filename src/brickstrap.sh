@@ -89,6 +89,7 @@ function brickstrap_create_tar()
             --one-file-system \
             --preserve-permissions \
             --xattrs \
+            --acls \
             --exclude "./brickstrap" \
             --exclude "./dev/*" \
             --exclude "./sys/*" \
@@ -113,6 +114,7 @@ function brickstrap_create_tar()
             tar --append \
                 --preserve-permissions \
                 --xattrs \
+                --acls \
                 --file "/brickstrap/_tar-out/$brickstrap_tar_base" \
                 --directory "/brickstrap/_tar-only" \
                 .
